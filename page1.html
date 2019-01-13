@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Forest</title>
+  <link rel="stylesheet" href="styles2.css">
+<script>
+   
+
+function check(){
+
+var volume = document.getElementById('volume').value;
+var volume_par = /[0-9]+/;
+var provVol = volume_par.test(volume);
+var cost = document.getElementById('cost').value;
+var cost_par = /[0-9]+/;
+var provCost = cost_par.test(cost);
+var time = document.getElementById('time').value;
+var time_par = /[0-9]+/;
+var provTime = time_par.test(time);
+
+
+if( volume == "" && cost =="" && time==""){
+   alert('Заполните поля!');
+}
+else{
+   if( volume == "" || cost =="" || time==""){
+      alert('Вы не заполнили одно из полей');
+   }
+      else{
+         if(provVol == true && provCost == true && provTime ==true){
+             alert('Данные успешно отправлены');
+         }
+            else alert('Поля должны содержать только числовые значения');    
+      }     
+}
+
+}
+</script>
+
+<ul id="nav">
+   <li>
+      <a href="#" title="Меню"  id="menu" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="30px" height="30px" ></a>
+      <ul>
+         <li><a href="">График поставок </a></li>
+         <li><a href="">Поставщики </a></li>
+         <li><a href="">Грузоотправители </a></li>
+         <li><a href="">Вагоны </a></li>
+         <li><a href="">Настройки </a></li>
+         <li><a href="file:///C:/Users/KROLY/Desktop/site.html#">Главная </a></li>
+      </ul>
+   </li>
+</ul>
+<h1 id="name">Настройка системы</h1>
+</head>
+<body>
+<div><h1>Объем необходимого сырья:
+<input name="textbox1" type="text" size="40" id="volume"> 
+</input></h1>
+
+<h1>Общая стоимость аренды:
+<input name="textbox2" type="text" size="40" id="cost"> 
+</input ></h1>
+
+<h1>Время выгрузки вагона:
+<input name="textbox3" type="text" size="40" id="time"> 
+</input></h1>
+
+</div>
+
+<!--Меню-->
+
+
+<p class="jj"><INPUT onclick=check() id ="e6" type=button value="Сохранить" style = "margin-left: 300px;margin-top: 20px; font-size:20px;"></p>
+
+</body>
+</html>
